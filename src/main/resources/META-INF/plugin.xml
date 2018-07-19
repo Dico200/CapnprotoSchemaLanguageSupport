@@ -24,9 +24,13 @@
     <depends>com.intellij.modules.lang</depends>
     -->
 
+    <extensionPoints>
+        <extensionPoint name="com.intellij.syntaxHighlighter"/>
+    </extensionPoints>
+
     <extensions defaultExtensionNs="com.intellij">
         <fileTypeFactory implementation="io.qubus.capnproto.CapnprotoFileTypeFactory"/>
-        <!-- Add your extensions here -->
+        <lang.syntaxHighlighterFactory implementationClass="io.qubus.capnproto.CapnprotoSyntaxHighlighterFactory"/>
     </extensions>
 
     <actions>

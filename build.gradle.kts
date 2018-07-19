@@ -9,11 +9,12 @@ plugins {
 repositories {
     mavenCentral()
     maven("http://dl.bintray.com/jetbrains/intellij-plugin-service")
-    //maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
+    compile("org.antlr:antlr4-runtime:4.7.1")
+    compile(files("out/artifacts/adaptor/adaptor.jar"))
     testCompile("junit", "junit", "4.12")
 }
 
